@@ -164,7 +164,7 @@ Flutter提供了官方的 package 搜索,[链接](https://pub.dartlang.org), 页
 ###创建package
 1. 选择File->New->New Flutter Project->Flutter package
 
-![](media/15420960119881/15429383262955.jpg)
+![](https://github.com/surrenderios/flutter_learn/blob/master/flutter_package/15429383262955.jpg)
 
 窗口中有 3 种选择, 参考 **package类型** 中所讲述的, 我们这里采用纯 Dart 代码来编写, 所以选择创建 package
 
