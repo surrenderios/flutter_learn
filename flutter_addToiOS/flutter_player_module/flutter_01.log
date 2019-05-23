@@ -1,0 +1,98 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter clean
+
+## exception
+
+YamlException: Error on line 43, column 3: Expected ':'.
+   ╷
+43 │   # To add Flutter specific assets to your application, add an assets section, 
+   │   ^
+   ╵
+
+```
+#0      Scanner._staleSimpleKeys (package:yaml/src/scanner.dart:491:9)
+#1      Scanner._fetchMoreTokens (package:yaml/src/scanner.dart:325:9)
+#2      Scanner.peek (package:yaml/src/scanner.dart:317:27)
+#3      Scanner.advance (package:yaml/src/scanner.dart:311:12)
+#4      Parser._parseBlockMappingValue (package:yaml/src/parser.dart:471:22)
+#5      Parser._stateMachine (package:yaml/src/parser.dart:88:16)
+#6      Parser.parse (package:yaml/src/parser.dart:47:19)
+#7      Loader._loadMapping (package:yaml/src/loader.dart:165:37)
+#8      Loader._loadNode (package:yaml/src/loader.dart:86:16)
+#9      Loader._loadMapping (package:yaml/src/loader.dart:165:19)
+#10     Loader._loadNode (package:yaml/src/loader.dart:86:16)
+#11     Loader._loadDocument (package:yaml/src/loader.dart:62:20)
+#12     Loader.load (package:yaml/src/loader.dart:54:20)
+#13     loadYamlDocument (package:yaml/yaml.dart:51:25)
+#14     loadYamlNode (package:yaml/yaml.dart:42:5)
+#15     loadYaml (package:yaml/yaml.dart:34:5)
+#16     FlutterManifest.createFromString (package:flutter_tools/src/flutter_manifest.dart:38:28)
+#17     FlutterManifest.createFromPath (package:flutter_tools/src/flutter_manifest.dart:32:12)
+#18     FlutterProject._readManifest (package:flutter_tools/src/project.dart:163:54)
+#19     FlutterProject.fromDirectory (package:flutter_tools/src/project.dart:44:38)
+#20     FlutterProject.current (package:flutter_tools/src/project.dart:55:38)
+#21     CleanCommand.runCommand (package:flutter_tools/src/commands/clean.dart:30:58)
+<asynchronous suspension>
+#22     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:488:18)
+#23     _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:77:64)
+#24     _rootRunUnary (dart:async/zone.dart:1132:38)
+#25     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#26     _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#27     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#28     Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#29     Future._complete (dart:async/future_impl.dart:473:7)
+#30     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#31     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async-patch/async_patch.dart:33:20)
+#32     _rootRun (dart:async/zone.dart:1124:13)
+#33     _CustomZone.run (dart:async/zone.dart:1021:19)
+#34     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#35     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#36     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#37     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:115:13)
+#38     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel master, v1.6.1-pre.68, on Mac OS X 10.13.6 17G65, locale en-US)
+    [32m•[39m Flutter version 1.6.1-pre.68 at /Users/Alex/development/flutter
+    [32m•[39m Framework revision d5aae54a28 (29 hours ago), 2019-05-20 23:19:18 -0400
+    [32m•[39m Engine revision 301f560bd8
+    [32m•[39m Dart version 2.3.1 (build 2.3.1-dev.0.0 b48c8b1d1c)
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+    [32m•[39m Android SDK at /Users/Alex/Library/Android/sdk
+    [32m•[39m Android NDK location not configured (optional; useful for native profiling support)
+    [32m•[39m Platform android-28, build-tools 28.0.3
+    [32m•[39m Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-915-b08)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m iOS toolchain - develop for iOS devices (Xcode 10.1)
+    [32m•[39m Xcode at /Applications/Xcode.app/Contents/Developer
+    [32m•[39m Xcode 10.1, Build version 10B61
+    [32m•[39m ios-deploy 1.9.4
+    [32m•[39m CocoaPods version 1.5.3
+
+[32m[✓][39m Android Studio (version 3.0)
+    [32m•[39m Android Studio at /Applications/Android Studio.app/Contents
+    [32m•[39m Flutter plugin version 23.2.1
+    [32m•[39m Dart plugin version 171.4424
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-915-b08)
+
+[33m[!][39m IntelliJ IDEA Community Edition (version 2018.1.5)
+    [32m•[39m IntelliJ at /Applications/IntelliJ IDEA CE.app
+    [31m✗[39m Flutter plugin not installed; this adds Flutter specific functionality.
+    [31m✗[39m Dart plugin not installed; this adds Dart specific functionality.
+    [32m•[39m For information about installing plugins, see
+      https://flutter.dev/intellij-setup/#installing-the-plugins
+
+[32m[✓][39m Connected device (1 available)
+    [32m•[39m Botin的 iPhone • d2acedead0dd9197a51bcc0fa5d5b4d043bb54ab • ios • iOS 12.1.2
+
+[33m![39m Doctor found issues in 1 category.
+```

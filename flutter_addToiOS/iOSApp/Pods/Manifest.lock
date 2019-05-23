@@ -1,0 +1,36 @@
+PODS:
+  - Flutter (1.0.0)
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+    - video_player
+  - Masonry (1.1.0)
+  - video_player (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `../flutter_player_module/.ios/Flutter/engine`)
+  - FlutterPluginRegistrant (from `../flutter_player_module/.ios/Flutter/FlutterPluginRegistrant`)
+  - Masonry
+  - video_player (from `../flutter_player_module/.ios/Flutter/.symlinks/video_player/ios`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../flutter_player_module/.ios/Flutter/engine"
+  FlutterPluginRegistrant:
+    :path: "../flutter_player_module/.ios/Flutter/FlutterPluginRegistrant"
+  video_player:
+    :path: "../flutter_player_module/.ios/Flutter/.symlinks/video_player/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  FlutterPluginRegistrant: b50efb05bbbde64ede539e39d5d1674dc1f28ea9
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  video_player: 906796a841943c8d370ac7c13b18039aa9b56498
+
+PODFILE CHECKSUM: ff2d33327b12d1ed6d289f4877fb358fe1cfeff3
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,1 @@
+../../../../../flutter_player_module/.ios/Flutter/FlutterPluginRegistrant/Classes/GeneratedPluginRegistrant.h
